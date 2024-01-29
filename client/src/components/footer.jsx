@@ -126,7 +126,7 @@ const Footer = () => {
 
         <div className="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
           <p>
-            © {currentYear} Dash Dispatch. All rights reserved. Powered By Harry
+            © {currentYear} YumRush. All rights reserved. Powered By Harry
             Meng
           </p>
           <ul className="list-unstyled d-flex">

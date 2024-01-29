@@ -1,6 +1,7 @@
 import React from "react";
+import Header from "./header.jsx";
 import Home from "./home.jsx";
-import Login from "./login.jsx";
+import SignIn from "./signin.jsx";
 import Register from "./register.jsx";
 import Restaurants from "./restaurants.jsx";
 import Footer from "./footer.jsx";
@@ -9,30 +10,13 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 const App = () => {
   return (
     <BrowserRouter>
-      {/* Navigation Links */}
-      <nav>
-        <Link to="/">
-          <button>Home</button>
-        </Link>
-
-        <Link to="/login">
-          <button>Login</button>
-        </Link>
-
-        <Link to="/restaurants">
-          <button>Restaurants</button>
-        </Link>
-
-        <Link to="/register">
-          <button>Register</button>
-        </Link>
-      </nav>
-
+      <Header />
+      {/* Set up the all routes here */}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/restaurants" element={<Restaurants />} />
-        <Route path="/register" element={<Register />} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/searchrestaurants" element={<Restaurants />} />
+        <Route path="/registerrestaurant" element={<Register />} />
       </Routes>
 
       <Footer />

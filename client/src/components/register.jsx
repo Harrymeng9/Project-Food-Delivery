@@ -1,7 +1,7 @@
 import React from "react";
 
-const register = () => {
+const Register = () => {
   return <div>here is to register restaurant</div>;
 };
 
-export default register;
+export default Register;
