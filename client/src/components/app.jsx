@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./header.jsx";
 import Home from "./home.jsx";
 import SignIn from "./signin.jsx";
+import SignUp from "./signup.jsx";
 import Register from "./register.jsx";
 import Restaurants from "./restaurants.jsx";
 import Footer from "./footer.jsx";
@@ -15,6 +16,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signin" element={<SignIn />} />
+        <Route path="/signup" element={<SignUp />} />
         <Route path="/searchrestaurants" element={<Restaurants />} />
         <Route path="/registerrestaurant" element={<Register />} />
       </Routes>

@@ -12,6 +12,14 @@ const Header = () => {
     navigate("/registerrestaurant");
   };
 
+  const signInApp = () => {
+    navigate("/signin");
+  };
+
+  const signUpApp = () => {
+    navigate("/signup");
+  };
+
   return (
     <div>
       <header className="p-3 text-bg-dark">
@@ -53,24 +61,24 @@ const Header = () => {
               </li>
             </ul>
 
-            <form
+            {/* <form
               className="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3"
               role="search"
             >
               <input
                 type="search"
-                className="form-control form-control-dark text-white"
+                className="form-control form-control-dark text-dark"
                 placeholder="Search..."
                 aria-label="Search"
               ></input>
-            </form>
+            </form> */}
 
             <div className="text-end">
-              <button type="button" className="btn btn-outline-light me-2">
-                Login
+              <button type="button" className="btn btn-outline-light me-2" onClick={signInApp}>
+                Sign In
               </button>
-              <button type="button" className="btn btn-warning">
-                Sign-up
+              <button type="button" className="btn btn-warning" onClick={signUpApp}>
+                Sign Up
               </button>
             </div>
           </div>
