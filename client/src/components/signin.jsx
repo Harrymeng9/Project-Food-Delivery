@@ -6,7 +6,7 @@ import Button from "react-bootstrap/Button";
 
 const SignIn = () => {
   return (
-    <div>
+    <div className='container'>
       <div className="col-lg-6 col-md-8 col-sm-12 mx-auto bg-white shadow p-4">
         <h2 className="text-center mb-3">Sign In</h2>
         <Form>

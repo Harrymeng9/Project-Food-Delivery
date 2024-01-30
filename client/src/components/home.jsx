@@ -25,7 +25,7 @@ const Home = () => {
   };
 
   return (
-    <div>
+    <div className='container'>
       {/* Delivery Address with a big photo */}
       <div style={myStyle}>
         <h1>Order Delivery Near You</h1>
@@ -44,7 +44,7 @@ const Home = () => {
 
       {/* Content Title */}
       <div>
-        <h1>How it works</h1>
+        <h1 className="text-center mb-3">How it works</h1>
       </div>
 
       {/* Three icons and paragraph */}

@@ -28,7 +28,7 @@ const SignUp = () => {
   };
 
   return (
-    <div>
+    <div className="container">
       <div className="col-lg-6 col-md-8 col-sm-12 mx-auto bg-white shadow p-4">
         <h2 className="text-center mb-3">Create an Account</h2>
         <Form>
