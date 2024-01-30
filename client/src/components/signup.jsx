@@ -28,43 +28,42 @@ const SignUp = () => {
   };
 
   return (
+    <div>
+      <div className="col-lg-6 col-md-8 col-sm-12 mx-auto bg-white shadow p-4">
+        <h2 className="text-center mb-3">Create an Account</h2>
+        <Form>
+          <Row>
+            <Form.Group as={Col}>
+              <Form.Label>First Name</Form.Label>
+              <Form.Control placeholder="First name" />
+            </Form.Group>
 
-    <div className="col-lg-6 col-md-8 col-sm-12 mx-auto bg-white shadow p-4">
-      <h2 className="text-center mb-3">Create an Account</h2>
-      <Form>
-        <Row>
+            <Form.Group as={Col}>
+              <Form.Label>Last Name</Form.Label>
+              <Form.Control placeholder="Last name" />
+            </Form.Group>
+          </Row>
+
           <Form.Group as={Col}>
-            <Form.Label>First Name</Form.Label>
-            <Form.Control placeholder="First name" />
+            <Form.Label>Email</Form.Label>
+            <Form.Control type="email" placeholder="Enter email" />
           </Form.Group>
 
-          <Form.Group as={Col}>
-            <Form.Label>Last Name</Form.Label>
-            <Form.Control placeholder="Last name" />
-          </Form.Group>
-        </Row>
-
-        <Form.Group as={Col} controlId="formGridEmail">
-          <Form.Label>Email</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" />
-        </Form.Group>
-
-        <Row>
-          <Form.Group as={Col}>
-            <Form.Label>password</Form.Label>
-            <Form.Control placeholder="Password" />
-          </Form.Group>
-          <Form.Group as={Col}>
-            <Form.Label>Confirm Password</Form.Label>
-            <Form.Control placeholder="Confirm Password" />
-          </Form.Group>
-        </Row>
-        <Button variant="primary" type="submit">
-          Create
-        </Button>
-      </Form>
-
-      <div>Already have an account? Sign In Here</div>
+          <Row>
+            <Form.Group as={Col}>
+              <Form.Label>Password</Form.Label>
+              <Form.Control placeholder="Password" />
+            </Form.Group>
+            <Form.Group as={Col}>
+              <Form.Label>Confirm Password</Form.Label>
+              <Form.Control placeholder="Confirm Password" />
+            </Form.Group>
+          </Row>
+          <Button variant="primary" type="submit">
+            Create
+          </Button>
+        </Form>
+      </div>
     </div>
   );
 };
