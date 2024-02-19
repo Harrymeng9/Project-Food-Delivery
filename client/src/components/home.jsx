@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+
   const [inputDeliveryAddress, setDeliveryAddress] = useState("");
   const navigate = useNavigate();
 
@@ -25,7 +26,7 @@ const Home = () => {
   };
 
   return (
-    <div className='container'>
+    <div className="container">
       {/* Delivery Address with a big photo */}
       <div style={myStyle}>
         <h1>Order Delivery Near You</h1>
@@ -63,7 +64,7 @@ const Home = () => {
               <path d="M2 11h1v1H2zm2 0h1v1H4zm-2 2h1v1H2zm2 0h1v1H4zm4-4h1v1H8zm2 0h1v1h-1zm-2 2h1v1H8zm2 0h1v1h-1zm2-2h1v1h-1zm0 2h1v1h-1zM8 7h1v1H8zm2 0h1v1h-1zm2 0h1v1h-1zM8 5h1v1H8zm2 0h1v1h-1zm2 0h1v1h-1zm0-2h1v1h-1z" />
             </svg>
           </div>
-          <h3 className="fs-2 text-body-emphasis">Featured title</h3>
+          <h3 className="fs-2 text-body-emphasis">Enter your Address</h3>
           <p>
             Paragraph of text beneath the heading to explain the heading. We'll
             add onto it with another sentence and probably just keep going until
@@ -84,7 +85,7 @@ const Home = () => {
               <path d="M2 11h1v1H2zm2 0h1v1H4zm-2 2h1v1H2zm2 0h1v1H4zm4-4h1v1H8zm2 0h1v1h-1zm-2 2h1v1H8zm2 0h1v1h-1zm2-2h1v1h-1zm0 2h1v1h-1zM8 7h1v1H8zm2 0h1v1h-1zm2 0h1v1h-1zM8 5h1v1H8zm2 0h1v1h-1zm2 0h1v1h-1zm0-2h1v1h-1z" />
             </svg>
           </div>
-          <h3 className="fs-2 text-body-emphasis">Featured title</h3>
+          <h3 className="fs-2 text-body-emphasis">Choose your Food</h3>
           <p>
             Paragraph of text beneath the heading to explain the heading. We'll
             add onto it with another sentence and probably just keep going until
@@ -105,7 +106,7 @@ const Home = () => {
               <path d="M2 11h1v1H2zm2 0h1v1H4zm-2 2h1v1H2zm2 0h1v1H4zm4-4h1v1H8zm2 0h1v1h-1zm-2 2h1v1H8zm2 0h1v1h-1zm2-2h1v1h-1zm0 2h1v1h-1zM8 7h1v1H8zm2 0h1v1h-1zm2 0h1v1h-1zM8 5h1v1H8zm2 0h1v1h-1zm2 0h1v1h-1zm0-2h1v1h-1z" />
             </svg>
           </div>
-          <h3 className="fs-2 text-body-emphasis">Featured title</h3>
+          <h3 className="fs-2 text-body-emphasis">Pick up or Delivery</h3>
           <p>
             Paragraph of text beneath the heading to explain the heading. We'll
             add onto it with another sentence and probably just keep going until
