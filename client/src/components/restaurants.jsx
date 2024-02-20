@@ -1,17 +1,9 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
+import { ApolloClient, InMemoryCache, gql, useQuery } from "@apollo/client";
 import Restaurant from "./restaurant.jsx";
 
-const Restaurants = () => {
-  const [firstName, setFirstName] = useState("test");
-  const [firstAddress, setFirstAddress] = useState("test");
-  const [firstPhoneNumber, setFirstPhoneNumber] = useState("test");
-  const [firstCreatedAt, setFirstCreatedAt] = useState("test");
-  const [secondName, setSecondName] = useState("test");
-  const [secondAddress, setSecondAddress] = useState("test");
-  const [secondPhoneNumber, setSecondPhoneNumber] = useState("test");
-
+const Restaurants = (props) => {
   const [allRestaurantsInfo, setAllRestaurantsInfo] = useState([]);
 
   const client = new ApolloClient({
@@ -65,7 +57,6 @@ const Restaurants = () => {
     //   })
     //   .then((result) => {
     //     console.log("frontend data", result.data);
-    //     setFirstName(result.data.getRestaurant.name);
     //   })
     //   .catch((error) => console.error(error));
   };

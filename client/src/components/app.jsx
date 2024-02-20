@@ -9,8 +9,9 @@ import Footer from "./footer.jsx";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 const App = () => {
+
   return (
-    <BrowserRouter>
+    <BrowserRouter >
       <Header />
       {/* Set up the all routes here */}
       <Routes>

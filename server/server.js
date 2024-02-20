@@ -39,6 +39,26 @@ const typeDefs = gql`
     menu_id: Int!
     created_at: Date
   }
+
+  type Mutation {
+    registerRestaurant(input: registerRestaurantInput!): InsertValuePayload!
+  }
+
+  input registerRestaurantInput {
+    name: String!
+    email: String!
+    address: String!
+    city: String!
+    state: String!
+    zipcode: Int!
+    phone_number: String!
+    created_at: Date
+  }
+
+  type InsertValuePayload {
+    success: Boolean!
+    message: String
+  }
 `;
 
 const resolvers = {
@@ -51,7 +71,7 @@ const resolvers = {
         // const values = [name];
         const { rows } = await db.query(query);
         // const { rows } = await db.query(query, values);
-        console.log("Rows from database111:", rows); // Log the rows retrieved from the database
+        // console.log("Rows from database111:", rows); // Log the rows retrieved from the database
         // return rows;
         if (rows.length > 0) {
           return rows[0]; // Return the name property of the first row
@@ -71,7 +91,7 @@ const resolvers = {
         // const values = [name];
         const { rows } = await db.query(query);
         // const { rows } = await db.query(query, values);
-        console.log("Rows from database222:", rows); // Log the rows retrieved from the database
+        // console.log("Rows from database222:", rows); // Log the rows retrieved from the database
         // return rows;
         if (rows.length > 0) {
           return rows; // Return the name property of the first row
@@ -84,6 +104,38 @@ const resolvers = {
       }
     },
   },
+
+  // ************************************
+  // Insert Values into the Database
+  Mutation: {
+    registerRestaurant: async (_, { input }) => {
+      try {
+        const query = `INSERT INTO restaurant(name, email, address, city, state, zipcode, phone_number, created_at)
+        VALUES ($1,$2,$3,$4,$5,$6,$7,NOW())`;
+        const values = [
+          input.name,
+          input.email,
+          input.address,
+          input.city,
+          input.state,
+          input.zipcode,
+          input.phone_number,
+        ];
+        const { rows } = await db.query(query, values);
+
+        return {
+          success: true,
+          message: "Restaurant is registered successfully!",
+        };
+      } catch (error) {
+        return {
+          success: false,
+          message: "Failed to insert value",
+        };
+      }
+    },
+  },
+  // ************************************
 };
 
 app.listen(port, () => {
